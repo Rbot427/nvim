@@ -123,5 +123,14 @@ require("remap")
 vim.opt.relativenumber = false
 vim.opt.number = true
 
+vim.opt.guicursor = {
+  "n-v-c:block",       -- Normal, Visual, Command: block
+  "i-ci-ve:block",     -- Insert and related modes: block (thick)
+  "r-cr:hor20",        -- Replace mode: horizontal bar
+  "o:hor50",           -- Operator-pending: wide horizontal
+  "a:blinkon0",        -- Disable all blinking
+}
+
+
 ---------- END MISC ----------
 
