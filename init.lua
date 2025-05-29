@@ -117,3 +117,11 @@ require("set")
 require("remap")
 
 ---------- SET DEFAULTS ----------
+
+---------- MISC ----------
+
+vim.opt.relativenumber = false
+vim.opt.number = true
+
+---------- END MISC ----------
+
