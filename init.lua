@@ -131,6 +131,8 @@ vim.opt.guicursor = {
   "a:blinkon0",        -- Disable all blinking
 }
 
+-- Sets the key for viewing error messages
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 
 ---------- END MISC ----------
 

@@ -16,7 +16,18 @@ return {
           },
         },
       }
+      
+      lspconfig.rust_analyzer.setup({
+        settings = {
+          ["rust-analyzer"] = {
+            cargo = { allFeatures = true },
+            checkOnSave = { command = "clippy" },
+          },
+        },
+      })
 
+      lspconfig.clangd.setup({})
+      
       -- You can add more LSP servers similarly
     end,
   },
