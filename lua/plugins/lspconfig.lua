@@ -16,7 +16,6 @@ return {
           },
         },
       }
-      
       lspconfig.rust_analyzer.setup({
         settings = {
           ["rust-analyzer"] = {
@@ -27,7 +26,6 @@ return {
       })
 
       lspconfig.clangd.setup({})
-      
       -- You can add more LSP servers similarly
     end,
   },
