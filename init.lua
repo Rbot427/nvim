@@ -139,6 +139,8 @@ vim.opt.clipboard = "unnamedplus"
 
 -- Set go-to definition
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+-- Set go-to declaration
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
 
 ---------- END MISC ----------
 
