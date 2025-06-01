@@ -111,6 +111,11 @@ require'nvim-treesitter.configs'.setup {
 
 ---------- END TREESITTER ----------
 
+---------- LANGUAGE SERVERS ---------
+
+
+---------- END LANGUAGE SERVERS ---------
+
 ---------- SET DEFAULTS ----------
 
 require("set")
