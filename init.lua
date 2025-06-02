@@ -142,5 +142,8 @@ vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 -- Set the clipboard to be the system clipboard
 vim.opt.clipboard = "unnamedplus"
 
+-- Disable copilot auto complete
+vim.g.copilot_enabled = false
+
 ---------- END MISC ----------
 
