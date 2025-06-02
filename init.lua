@@ -142,10 +142,5 @@ vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 -- Set the clipboard to be the system clipboard
 vim.opt.clipboard = "unnamedplus"
 
--- Set go-to definition
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
--- Set go-to declaration
-vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
-
 ---------- END MISC ----------
 
