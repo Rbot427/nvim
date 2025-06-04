@@ -51,23 +51,8 @@ require("catppuccin").setup({
     },
 })
 
--- setup must be called before loading
-vim.cmd.colorscheme "catppuccin"
----------- END COLOR SCHEME ----------
 
----------- TELESCOPE ----------
-
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
-
----------- END TELESCOPE ----------
-
----------- TREESITTER ----------
-
-require'nvim-treesitter.configs'.setup {
+require('nvim-treesitter.configs').setup {
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
 
@@ -109,41 +94,6 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
----------- END TREESITTER ----------
-
----------- LANGUAGE SERVERS ---------
-
-
----------- END LANGUAGE SERVERS ---------
-
----------- SET DEFAULTS ----------
-
+-- These do most of the configuration heavy lifting
 require("set")
 require("remap")
-
----------- SET DEFAULTS ----------
-
----------- MISC ----------
-
-vim.opt.relativenumber = false
-vim.opt.number = true
-
-vim.opt.guicursor = {
-  "n-v-c:block",       -- Normal, Visual, Command: block
-  "i-ci-ve:block",     -- Insert and related modes: block (thick)
-  "r-cr:hor20",        -- Replace mode: horizontal bar
-  "o:hor50",           -- Operator-pending: wide horizontal
-  "a:blinkon0",        -- Disable all blinking
-}
-
--- Sets the key for viewing error messages
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
-
--- Set the clipboard to be the system clipboard
-vim.opt.clipboard = "unnamedplus"
-
--- Disable copilot auto complete
-vim.g.copilot_enabled = false
-
----------- END MISC ----------
-
