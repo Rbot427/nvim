@@ -32,8 +32,14 @@ return {
           },
         },
       }
-      
-      lspconfig.clangd.setup {}
+
+      lspconfig.clangd.setup({
+        cmd = { "clangd" }, -- optional, use system clangd
+        filetypes = { "c", "cpp", "objc", "objcpp" },
+        root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+        -- on_attach = function(client, bufnr) ... end, -- optional
+        -- capabilities = capabilities -- optional, for cmp, etc.
+      })
       -- You can add more LSP servers similarly
     end,
   },
