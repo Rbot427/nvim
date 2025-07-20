@@ -17,7 +17,18 @@ return {
         },
       }
 
-      lspconfig.pyright.setup {}
+      lspconfig.pylsp.setup {
+        settings = {
+          pylsp = {
+            plugins = {
+              pycodestyle = { enabled = false }, -- example to disable pycodestyle
+              pylsp_mypy = { enabled = true }, -- enable mypy plugin if installed
+              pylsp_black = { enabled = true }, -- enable black formatting
+              pylsp_isort = { enabled = true }, -- enable isort formatting
+            },
+          },
+        },
+      }
 
       lspconfig.rust_analyzer.setup {
         settings = {
