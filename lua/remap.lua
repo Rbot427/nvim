@@ -19,4 +19,4 @@ vim.keymap.set('n', '<leader>fb', telescope.buffers, { desc = 'Telescope buffers
 vim.keymap.set('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help tags' })
 
 -- Sets the key for viewing error messages
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
