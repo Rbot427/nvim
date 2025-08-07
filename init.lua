@@ -98,7 +98,7 @@ require("toggleterm").setup{
   -- size can be a number or function which is passed the current terminal
   size = function(term)
     if term.direction == "horizontal" then
-      return 15
+      return 10
     elseif term.direction == "vertical" then
       return vim.o.columns * 0.4
     end
@@ -113,7 +113,7 @@ require("toggleterm").setup{
   terminal_mappings = true, -- whether or not the open mapping applies in the opened terminals
   persist_size = true,
   persist_mode = true, -- if set to true (default) the previous terminal mode will be remembered
-  direction = 'horizontal',
+  direction = 'float',
   close_on_exit = true, -- close the terminal window when the process exits
   clear_env = false, -- use only environmental variables from `env`, passed to jobstart()
    -- Change the default shell. Can be a string or a function returning a string
@@ -143,7 +143,6 @@ require("toggleterm").setup{
     horizontal_breakpoint = 135,
   }
 }
-
 -- These do most of the configuration heavy lifting
 require("set")
 require("remap")

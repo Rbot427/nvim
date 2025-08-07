@@ -20,6 +20,7 @@ vim.opt.termguicolors = true
 
 vim.opt.relativenumber = false
 vim.opt.number = true
+vim.opt.signcolumn = "yes"
 
 vim.opt.guicursor = {
   "n-v-c:block",       -- Normal, Visual, Command: block
