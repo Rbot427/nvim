@@ -30,20 +30,6 @@ return {
         },
       }
 
-      lspconfig.rust_analyzer.setup {
-        settings = {
-          ["rust-analyzer"] = {
-            cargo = {
-              allFeatures = true,
-            },
-            checkOnSave = {
-              enable = true,  -- enable checking on save
-              command = "clippy"  -- specify to run clippy instead of default check
-            },
-          },
-        },
-      }
-
       lspconfig.clangd.setup({
         cmd = { "clangd" }, -- optional, use system clangd
         filetypes = { "c", "cpp", "objc", "objcpp" },

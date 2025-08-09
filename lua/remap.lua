@@ -1,3 +1,7 @@
+-- Set vim editor keybinds
+vim.keymap.set("i", "jk", "<Esc>", { noremap = true })
+vim.keymap.set("n", "<C-s>", ":w<CR>")
+
 -- Set go-to keybinds
 local telescope = require('telescope.builtin')
 vim.keymap.set("n", "gd", telescope.lsp_definitions, { desc = "Go to definition" })

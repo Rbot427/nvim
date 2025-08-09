@@ -98,7 +98,7 @@ require("toggleterm").setup{
   -- size can be a number or function which is passed the current terminal
   size = function(term)
     if term.direction == "horizontal" then
-      return 10
+      return 15
     elseif term.direction == "vertical" then
       return vim.o.columns * 0.4
     end
@@ -125,10 +125,10 @@ require("toggleterm").setup{
     -- see :h nvim_open_win for details on borders however
     -- the 'curved' border is a custom border type
     -- not natively supported but implemented in this plugin.
-    border = 'single',    
+    border = 'single',
     -- like `size`, width, height, row, and col can be a number or function which is passed the current terminal
-    winblend = 3,
-    title_pos = 'left'  
+    winblend = 0,
+    title_pos = 'left'
   },
   winbar = {
     enabled = false,
@@ -143,6 +143,33 @@ require("toggleterm").setup{
     horizontal_breakpoint = 135,
   }
 }
+
+-- Rustaceanvim setup
+vim.g.rustaceanvim = {
+  server = {
+    on_attach = function(client, bufnr)
+      -- Only enable if the server supports it
+      if client.server_capabilities.inlayHintProvider then
+        -- For Neovim 0.10+
+        vim.lsp.inlay_hint.enable(true)
+      end
+    end,
+    settings = {
+      ["rust-analyzer"] = {
+        inlayHints = {
+          locationLinks = false,
+          lifetimeElisionHints = { enable = true, useParameterNames = true },
+          bindingModeHints = { enable = true },
+          closureReturnTypeHints = { enable = "always" },
+          discriminantHints = { enable = "always" },
+          parameterHints = true,
+          typeHints = true,
+        },
+      },
+    },
+  },
+}
+
 -- These do most of the configuration heavy lifting
 require("set")
 require("remap")
