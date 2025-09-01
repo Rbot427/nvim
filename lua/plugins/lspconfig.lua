@@ -17,6 +17,16 @@ return {
         },
       }
 
+      lspconfig.rust_analyzer.setup {
+        cmd = {"rust-analyzer"},
+        filetypes = {"rs"},
+        settings = {
+          ["rust-analyzer"] = {
+
+          }
+        }
+      }
+
       lspconfig.pylsp.setup {
         settings = {
           pylsp = {
